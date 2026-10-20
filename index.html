@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUST Entry Test (NET) Mock Test</title>
+    
+    <!-- MathJax for Rendering Formulas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="iconfav.png">
+
+
+
+</head>
+<body>
+
+    <!-- HOME SCREEN -->
+    <div id="home-screen" class="screen active">
+        <div class="home-card">
+            <h1>NUST ENTRY TEST (NET) MOCK TEST</h1>
+            <p class="subtitle">PREPAREWITH MUDASIR</p>
+            <div class="info-box"><strong>Total MCQs:</strong> 200 Questions (100 Math, 60 Physics, 40 English)</div>
+            <div class="section-select-container">
+                <label for="starting-section"><strong>Select Section to Start:</strong></label>
+                <select id="starting-section">
+                    <option value="math">Mathematics (1 to 100)</option>
+                    <option value="physics">Physics (101 to 160)</option>
+                    <option value="english">English (161 to 200)</option>
+                </select>
+            </div>
+            <button id="start-btn" class="btn-start">Start Test</button>
+        </div>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div id="quiz-screen" class="screen">
+        <header class="quiz-header">
+            <div id="current-subject" class="header-section left">Mathematics</div>
+            <div class="header-section center">Engineering/Computer Science</div>
+            <div class="header-section right">
+                <span class="header-brand-white">NUST </span>
+                <span class="student-label">PREPAREWITH MUDASIR</span>
+            </div>
+        </header>
+
+        <div class="sub-header">
+            <div id="question-number-display">Question No : 1 of 200</div>
+            <div>Marks: 1</div>
+        </div>
+
+        <div class="main-content">
+            <div class="quiz-body">
+                <div class="box-container">
+                    <div class="box-title">Question</div>
+                    <div class="box-content" id="question-text">Loading...</div>
+                </div>
+                <div class="box-container">
+                    <div class="box-title red-text">Answer <span style="font-weight:normal; color:#000;">( Please select your correct option )</span></div>
+                    <div class="box-content options-list" id="options-container"></div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="photo-box">
+                    <div class="photo-title">Photograph</div>
+                    <div class="photo-placeholder">Your<br>Image<br>here</div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="quiz-footer">
+            <div class="timer-section">
+                <div class="start-time-box">Start Time: <span id="start-time-text">7:14 PM</span></div>
+                <div class="timer-display">
+                    <span id="timer-minutes" class="time-large">180</span>
+                    <span style="font-size:8px; color:red; font-weight:bold;">min<br>Remaining</span>
+                    <span>🕒</span>
+                </div>
+            </div>
+            <div class="controls-section">
+                <button class="nav-btn" id="save-btn">💾 Save</button>
+                <button class="nav-btn" id="next-btn">❯ Next</button>
+                <button class="nav-btn" id="prev-btn">❮ Prev</button>
+                <button class="nav-btn" id="next-sec-btn">➔| Next Sec.</button>
+                <button class="nav-btn" id="prev-sec-btn">|← Prev Sec.</button>
+            </div>
+        </footer>
+
+        <div class="footer-banner">
+            <a id="finish-btn" class="finish-link">Click here to <strong>FINISH</strong> Your Test</a>
+            <p style="color:red; font-weight:bold; margin-top:2px;">This is a simulated NUST Entry Test (NET) interface — powered by PREPAREWITH MUDASIR</p>
+        </div>
+    </div>
+
+    <!-- RESULT MODAL -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <h2>Test Result</h2>
+            <div id="score-details"></div>
+            <button onclick="location.reload()" class="btn-start" style="margin-top:15px;">Restart Test</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
