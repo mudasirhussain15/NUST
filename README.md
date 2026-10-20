@@ -1,0 +1,1 @@
+A responsive NUST preparation website designed to help students prepare for the NUST Entry Test (NET) with practice quizzes, study resources, important topics, and a user-friendly interface. This website same interface computer based NET test
